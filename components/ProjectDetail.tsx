@@ -75,10 +75,9 @@ const ProjectDetail: React.FC<ProjectDetailProps> = ({ project, onBack, onNext }
                             <h3 className="text-[10px] text-secondary uppercase tracking-widest mb-2 font-sans">Product</h3>
                             {project.id === 1 ? (
                               <p className="font-medium font-sans text-white text-lg">
-                                <span className="inline-block border-b-2 border-green-400 pb-0.5">
-                                  Aban Tether
+                                <span>
+                                  Zeero, Mobility App
                                 </span>
-                                <span>, Cryptocurrency Exchange</span>
                               </p>
                             ) : (
                               <p className="font-medium font-sans text-white text-lg">

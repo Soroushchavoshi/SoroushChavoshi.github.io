@@ -54,7 +54,8 @@ export const PROJECTS: Project[] = [
       {
         title: "Low-Fidelity Prototype & Usability Testing",
         description: "Converted the paper sketches into a low-fidelity prototype to conduct clearer usability tests.",
-        image: ""
+        image: "",
+        figmaEmbedUrl: "https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fproto%2FGD5Stoz7wl6diKJn7MXm3U%2FCarTbeCartT-CaseStudy%3Fnode-id%3D0-1%26p%3Df%26viewport%3D458%252C-841%252C0.09%26t%3D7NI7rqsHj7yxavU5-0%26scaling%3Dscale-down%26content-scaling%3Dfixed%26starting-point-node-id%3D76%253A674%26show-proto-sidebar%3D1"
       },
       {
         title: "Key Insights",
@@ -93,14 +94,14 @@ export const PROJECTS: Project[] = [
     title: "Zeero:",
     tags: ["Redesign", "Mobility App"],
     image: "/images/Project1-1.jpg", // Main Cover Image
-    description: "Redesigning the main trading dashboard to create a clearer, more user-centered structure.",
+    description: "Enhancing the City Ride with Better User Experience",
     
     // --- Detail Page Content ---
-    client: "AbanTether, Cryptocurrency Exchange",
-    role: "UX Researcher",
-    product: "AbanTether, Cryptocurrency Exchange",
-    tools: ["Figjam", "Clarity"],
-    challenge: "The dashboard’s layout lacked clear logic and effective categorization of information.\n\nAban Tether, a cryptocurrency exchange, requested a redesign of the dashboard to improve its information architecture.",
+    client: "Zeero, Mobility App",
+    role: "Product Designer",
+    product: "Zeero, Mobility App",
+    tools: ["Figma", "Figjam", "Pen & Paper"],
+    challenge: "I, along with my friend and colleague Kimia, as regular users of Zeero (an electric bike and motorcycle rental service), loved the idea but noticed several UX issues. We mapped the user journey to identify pain points and turned our assumptions into key questions.",
     process: "We kicked off with a series of stakeholder workshops to align on the core KPIs. Following this, I led a card-sorting session with 15 active traders to understand their mental models regarding asset categorization.\n\nMoving from low-fidelity sketches on Figjam to high-fidelity prototypes in Figma, we iterated based on weekly feedback loops, focusing heavily on reducing the cognitive load for new users while retaining speed for power users.",
     
     // New Process Image (appears after process text)
@@ -135,7 +136,7 @@ export const PROJECTS: Project[] = [
       }
     ],
 
-    timeline: "1 Week",
+    timeline: "1 Month and 2 Weeks",
     
     // Additional images for the case study grid
     images: [
