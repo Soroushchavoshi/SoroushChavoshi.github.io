@@ -1,6 +1,6 @@
 name = "soroushchavoshiportfolio"
 compatibility_date = "2026-02-07"
-type = "webpack" # فقط اگر پروژه React یا Next هست
+type = "webpack"
 
 [build]
 command = "npm run build"
