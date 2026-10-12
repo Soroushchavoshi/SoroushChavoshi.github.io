@@ -30,6 +30,62 @@ export const RESUME_URL = '/Soroush_Chavoshi_Resume.pdf';
 
 export const PROJECTS: Project[] = [
   {
+    id: 1,
+    title: "Zeero:",
+    tags: ["Redesign", "Mobility App"],
+    image: "/images/Project1-1.jpg", // Main Cover Image
+    description: "Enhancing the City Ride with Better User Experience",
+    
+    // --- Detail Page Content ---
+    client: "Zeero, Mobility App",
+    role: "Product Designer",
+    product: "Zeero, Mobility App",
+    tools: ["Figma", "Figjam", "Pen & Paper"],
+    challenge: "I, along with my friend and colleague Kimia, as regular users of Zeero (an electric bike and motorcycle rental service), loved the idea but noticed several UX issues. We mapped the user journey to identify pain points and turned our assumptions into key questions.",
+    process: "We kicked off with a series of stakeholder workshops to align on the core KPIs. Following this, I led a card-sorting session with 15 active traders to understand their mental models regarding asset categorization.\n\nMoving from low-fidelity sketches on Figjam to high-fidelity prototypes in Figma, we iterated based on weekly feedback loops, focusing heavily on reducing the cognitive load for new users while retaining speed for power users.",
+    
+    // New Process Image (appears after process text)
+    processImage: "https://picsum.photos/id/3/1200/800",
+
+    // New 5 Steps
+    processSteps: [
+      {
+        title: "01. Discovery & Audit",
+        description: "We began by auditing the existing platform to identify friction points. Heatmaps revealed that 60% of clicks were concentrated on just 10% of the features, indicating a need to declutter.",
+        image: "https://picsum.photos/id/201/800/600"
+      },
+      {
+        title: "02. User Interviews",
+        description: "I conducted in-depth interviews with 10 power users and 5 novices. The key insight was that novices felt overwhelmed by data density, while power users wanted customization.",
+        image: "https://picsum.photos/id/445/800/600"
+      },
+      {
+        title: "03. Information Architecture",
+        description: "Using the card sorting results, we restructured the navigation tree. We moved from a deep hierarchy to a broader, shallower structure to reduce the number of clicks to key actions.",
+        image: "https://picsum.photos/id/6/800/600"
+      },
+      {
+        title: "04. Wireframing & Prototyping",
+        description: "Low-fidelity wireframes allowed us to test the new navigation flow without getting distracted by UI details. We validated the 'Quick Trade' feature placement early on.",
+        image: "https://picsum.photos/id/119/800/600"
+      },
+      {
+        title: "05. Validation & Handoff",
+        description: "Final usability testing showed a 40% reduction in time-to-task. The design system was updated, and assets were handed off to developers via Zeplin with detailed documentation.",
+        image: "https://picsum.photos/id/180/800/600"
+      }
+    ],
+
+    timeline: "1 Month and 2 Weeks",
+    
+    // Additional images for the case study grid
+    images: [
+      "https://picsum.photos/id/1/1200/900",   // Full width image
+      "https://picsum.photos/id/180/1200/800", // Grid image 1
+      "https://picsum.photos/id/20/1200/800"   // Grid image 2
+    ]
+  },
+  {
     id: 2,
     title: "CardToCard:",
     tags: ["MVP Design", "Solo Project", "1-Week Timeline"],
@@ -94,62 +150,6 @@ export const PROJECTS: Project[] = [
       "/images/Project2-2.jpg",
       "https://picsum.photos/id/48/1200/800",
       "https://picsum.photos/id/59/1200/800"
-    ]
-  },
-  {
-    id: 1,
-    title: "Zeero:",
-    tags: ["Redesign", "Mobility App"],
-    image: "/images/Project1-1.jpg", // Main Cover Image
-    description: "Enhancing the City Ride with Better User Experience",
-    
-    // --- Detail Page Content ---
-    client: "Zeero, Mobility App",
-    role: "Product Designer",
-    product: "Zeero, Mobility App",
-    tools: ["Figma", "Figjam", "Pen & Paper"],
-    challenge: "I, along with my friend and colleague Kimia, as regular users of Zeero (an electric bike and motorcycle rental service), loved the idea but noticed several UX issues. We mapped the user journey to identify pain points and turned our assumptions into key questions.",
-    process: "We kicked off with a series of stakeholder workshops to align on the core KPIs. Following this, I led a card-sorting session with 15 active traders to understand their mental models regarding asset categorization.\n\nMoving from low-fidelity sketches on Figjam to high-fidelity prototypes in Figma, we iterated based on weekly feedback loops, focusing heavily on reducing the cognitive load for new users while retaining speed for power users.",
-    
-    // New Process Image (appears after process text)
-    processImage: "https://picsum.photos/id/3/1200/800",
-
-    // New 5 Steps
-    processSteps: [
-      {
-        title: "01. Discovery & Audit",
-        description: "We began by auditing the existing platform to identify friction points. Heatmaps revealed that 60% of clicks were concentrated on just 10% of the features, indicating a need to declutter.",
-        image: "https://picsum.photos/id/201/800/600"
-      },
-      {
-        title: "02. User Interviews",
-        description: "I conducted in-depth interviews with 10 power users and 5 novices. The key insight was that novices felt overwhelmed by data density, while power users wanted customization.",
-        image: "https://picsum.photos/id/445/800/600"
-      },
-      {
-        title: "03. Information Architecture",
-        description: "Using the card sorting results, we restructured the navigation tree. We moved from a deep hierarchy to a broader, shallower structure to reduce the number of clicks to key actions.",
-        image: "https://picsum.photos/id/6/800/600"
-      },
-      {
-        title: "04. Wireframing & Prototyping",
-        description: "Low-fidelity wireframes allowed us to test the new navigation flow without getting distracted by UI details. We validated the 'Quick Trade' feature placement early on.",
-        image: "https://picsum.photos/id/119/800/600"
-      },
-      {
-        title: "05. Validation & Handoff",
-        description: "Final usability testing showed a 40% reduction in time-to-task. The design system was updated, and assets were handed off to developers via Zeplin with detailed documentation.",
-        image: "https://picsum.photos/id/180/800/600"
-      }
-    ],
-
-    timeline: "1 Month and 2 Weeks",
-    
-    // Additional images for the case study grid
-    images: [
-      "https://picsum.photos/id/1/1200/900",   // Full width image
-      "https://picsum.photos/id/180/1200/800", // Grid image 1
-      "https://picsum.photos/id/20/1200/800"   // Grid image 2
     ]
   }
 ];
