@@ -1,6 +1,10 @@
 
 import { Project, Service } from './types';
 
+// Visibility toggle for the About section (and its "About" link in the header/menu).
+// Set to true whenever you want the About section back.
+export const SHOW_ABOUT = false;
+
 // ==========================================
 // PROJECT DATA (CASE STUDIES)
 // ==========================================

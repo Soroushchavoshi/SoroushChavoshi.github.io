@@ -5,7 +5,7 @@ import ProjectCard from './components/ProjectCard';
 import ProjectDetail from './components/ProjectDetail';
 import Footer from './components/Footer';
 import AudioPlayer from './components/AudioPlayer';
-import { PROJECTS, SERVICES } from './constants';
+import { PROJECTS, SERVICES, SHOW_ABOUT } from './constants';
 import { Project } from './types';
 import { Award, Heart, ArrowRight } from 'lucide-react';
 import ResumeModal from './components/ResumeModal';
@@ -124,7 +124,8 @@ const App: React.FC = () => {
                 </div>
              </section>
 
-             {/* About Section */}
+             {/* About Section – shown only when SHOW_ABOUT is true (constants.ts) */}
+             {SHOW_ABOUT && (
              <section id="about" className="py-32 border-t border-white/10 relative overflow-hidden">
                   {/* Ambient Glass Glow */}
                   <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-white/5 rounded-full blur-[120px] pointer-events-none -z-10"></div>
@@ -463,7 +464,8 @@ const App: React.FC = () => {
                       </div>
                   </div>
              </section>
-             
+             )}
+
              <Footer />
           </div>
       </main>

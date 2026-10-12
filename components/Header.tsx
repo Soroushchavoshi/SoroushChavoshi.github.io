@@ -1,6 +1,7 @@
 
 import React, { useState } from 'react';
 import { Menu, X, Asterisk } from 'lucide-react';
+import { SHOW_ABOUT } from '../constants';
 
 interface HeaderProps {
   onNavigate?: () => void;
@@ -13,7 +14,8 @@ const Header: React.FC<HeaderProps> = ({ onNavigate, onOpenResume }) => {
   const navLinks = [
     { name: 'Work', href: '#work' }, // Targets the Work section title
     { name: 'Resume', href: '#resume' }, 
-    { name: 'About', href: '#about' }, // Targets the renamed About section
+    // About link is shown only when SHOW_ABOUT is true (constants.ts)
+    ...(SHOW_ABOUT ? [{ name: 'About', href: '#about' }] : []),
   ];
 
   const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
