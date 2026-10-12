@@ -31,10 +31,10 @@ export const RESUME_URL = '/Soroush_Chavoshi_Resume.pdf';
 export const PROJECTS: Project[] = [
   {
     id: 1,
-    title: "Zeero:",
-    tags: ["Redesign", "Mobility App"],
+    title: "From Scattered Orders to a Structured Ordering System",
+    tags: ["UX Case Study"],
     image: "/images/Zeero-Cover.jpg", // Main Cover Image
-    description: "Enhancing the City Ride with Better User Experience",
+    description: "Designing an Ordering App for Torreh Bakery",
     
     // --- Detail Page Content ---
     client: "Zeero, Mobility App",
