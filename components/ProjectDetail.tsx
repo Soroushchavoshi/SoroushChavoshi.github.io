@@ -57,55 +57,17 @@ const ProjectDetail: React.FC<ProjectDetailProps> = ({ project, onBack, onNext }
         </div>
       </div>
 
-      {/* BLOCK 1: Metadata & The Challenge */}
+      {/* BLOCK 1: The Challenge */}
       <div className="container mx-auto px-6 mb-24 md:mb-32">
-        <div className="grid md:grid-cols-12 gap-12 md:gap-24 items-start">
-            
-            {/* Left Column: Metadata */}
-            {/* Removed top border and padding to align flush with the Challenge title */}
-            <div className="md:col-span-4">
-                <div className="flex flex-col gap-10">
-                    <div>
-                        <h3 className="text-[10px] text-secondary uppercase tracking-widest mb-2 font-sans">Role</h3>
-                        <p className="font-medium font-sans text-white text-lg">{project.role || 'Lead Designer'}</p>
-                    </div>
-
-                    {project.product && (
-                        <div>
-                            <h3 className="text-[10px] text-secondary uppercase tracking-widest mb-2 font-sans">Product</h3>
-                            <p className="font-medium font-sans text-white text-lg">
-                                {project.product}
-                            </p>
-                        </div>
-                    )}
-                    
-                    <div>
-                        <h3 className="text-[10px] text-secondary uppercase tracking-widest mb-2 font-sans">Tools</h3>
-                        <p className="font-medium font-sans text-white text-lg">
-                            {project.tools ? project.tools.join(', ') : 'Figma, UI/UX Strategy'}
-                        </p>
-                    </div>
-
-                    {project.timeline && (
-                        <div>
-                            <h3 className="text-[10px] text-secondary uppercase tracking-widest mb-2 font-sans">Timeline</h3>
-                            <p className="font-medium font-sans text-white text-lg">{project.timeline}</p>
-                        </div>
-                    )}
+        <div className="md:max-w-5xl">
+            <section>
+                <h2 className="text-4xl md:text-6xl font-sans font-light tracking-tight mb-8">{project.challengeTitle || 'The Challenge'}</h2>
+                <div className="text-lg md:text-2xl leading-relaxed text-gray-400 font-light space-y-6 font-sans">
+                    <p className="whitespace-pre-line">
+                        {project.challenge || "Every project begins with a unique set of obstacles. For this client, the primary goal was to completely reimagine their digital presence to align with a new strategic direction."}
+                    </p>
                 </div>
-            </div>
-
-            {/* Right Column: The Challenge */}
-            <div className="md:col-span-8">
-                <section>
-                    <h2 className="text-4xl md:text-6xl font-sans font-light tracking-tight mb-8">{project.challengeTitle || 'The Challenge'}</h2>
-                    <div className="text-lg md:text-2xl leading-relaxed text-gray-400 font-light space-y-6 font-sans">
-                        <p className="whitespace-pre-line">
-                            {project.challenge || "Every project begins with a unique set of obstacles. For this client, the primary goal was to completely reimagine their digital presence to align with a new strategic direction."}
-                        </p>
-                    </div>
-                </section>
-            </div>
+            </section>
         </div>
       </div>
 
@@ -117,7 +79,7 @@ const ProjectDetail: React.FC<ProjectDetailProps> = ({ project, onBack, onNext }
                     <div key={i} className="relative overflow-hidden group">
                         <img
                             src={src}
-                            className="w-full h-auto grayscale group-hover:grayscale-0 transition-all duration-[1.5s] ease-in-out"
+                            className="w-full h-auto"
                             alt={`Context ${i + 1}`}
                         />
                     </div>
@@ -134,10 +96,10 @@ const ProjectDetail: React.FC<ProjectDetailProps> = ({ project, onBack, onNext }
       {/* BLOCK 2: Full Width Image (Edge-to-Edge) */}
       {project.images && project.images[0] && (
         <div className="w-full mb-24 md:mb-40 relative overflow-hidden group">
-            <img 
-                src={project.images[0]} 
-                className="w-full h-auto grayscale group-hover:grayscale-0 transition-all duration-[1.5s] ease-in-out" 
-                alt="Process Highlight" 
+            <img
+                src={project.images[0]}
+                className="w-full h-auto"
+                alt="Process Highlight"
             />
         </div>
       )}
@@ -159,10 +121,10 @@ const ProjectDetail: React.FC<ProjectDetailProps> = ({ project, onBack, onNext }
       {/* Process Image (Full Width - Like Challenge Image) */}
       {project.processImage && (
         <div className="w-full mb-24 md:mb-40 relative overflow-hidden group">
-            <img 
-                src={project.processImage} 
-                className="w-full h-auto grayscale group-hover:grayscale-0 transition-all duration-[1.5s] ease-in-out" 
-                alt="Process Overview" 
+            <img
+                src={project.processImage}
+                className="w-full h-auto"
+                alt="Process Overview"
             />
         </div>
       )}
@@ -198,10 +160,10 @@ const ProjectDetail: React.FC<ProjectDetailProps> = ({ project, onBack, onNext }
                           />
                         </div>
                       ) : (
-                        <img 
-                            src={step.image} 
-                            className="w-full h-auto grayscale group-hover:grayscale-0 transition-all duration-[1.5s] ease-in-out" 
-                            alt={step.title} 
+                        <img
+                            src={step.image}
+                            className="w-full h-auto"
+                            alt={step.title}
                         />
                       )}
                   </div>
