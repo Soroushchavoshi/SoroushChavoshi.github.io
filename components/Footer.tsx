@@ -9,36 +9,34 @@ const Footer: React.FC = () => {
   ];
 
   return (
-    <footer id="contact" className="py-6 border-t border-black/10 px-6 bg-accent text-black selection:bg-black selection:text-white">
+    <footer id="contact" className="py-2.5 border-t border-white/10 px-6 bg-black/10 backdrop-blur-2xl backdrop-saturate-150 text-white selection:bg-accent selection:text-black">
       <div className="container mx-auto">
-        <div className="flex flex-col md:flex-row justify-between items-center gap-4 md:gap-0">
-          
+        <div className="flex flex-col md:flex-row justify-between items-center gap-2 md:gap-0">
+
           {/* Left Side: Email Only */}
-          <div className="flex flex-col md:flex-row items-center gap-4 md:gap-8 w-full md:w-auto justify-center md:justify-start">
-            <a 
-              href="mailto:soroush.chavosh@gmail.com" 
-              className="inline-flex items-center gap-2 text-sm font-bold uppercase tracking-wider transition-colors group font-sans"
-            >
-              soroush.chavosh@gmail.com
-              <ArrowRight size={14} className="group-hover:-rotate-45 transition-transform duration-300" />
-            </a>
-          </div>
+          <a
+            href="mailto:soroush.chavosh@gmail.com"
+            className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-wider transition-colors group font-sans text-gray-200 hover:text-accent"
+          >
+            soroush.chavosh@gmail.com
+            <ArrowRight size={12} className="group-hover:-rotate-45 transition-transform duration-300" />
+          </a>
 
           {/* Right Side: Socials & Copyright */}
-          <div className="flex items-center gap-6 md:gap-8 w-full md:w-auto justify-center md:justify-end">
+          <div className="flex items-center gap-6 md:gap-8 justify-center md:justify-end">
             {socialLinks.map((social) => (
-              <a 
-                key={social.name} 
-                href={social.href} 
-                target="_blank" 
+              <a
+                key={social.name}
+                href={social.href}
+                target="_blank"
                 rel="noopener noreferrer"
-                className="text-[10px] uppercase tracking-widest text-black/60 hover:text-black transition-colors font-sans font-bold"
+                className="text-[10px] uppercase tracking-widest text-white/60 hover:text-white transition-colors font-sans font-bold"
               >
                 {social.name}
               </a>
             ))}
-            
-             <p className="text-black/40 text-[10px] font-sans uppercase tracking-widest">
+
+             <p className="text-white/40 text-[10px] font-sans uppercase tracking-widest">
               © {new Date().getFullYear()} Soroush Chavoshi
             </p>
           </div>
