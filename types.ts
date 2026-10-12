@@ -28,6 +28,7 @@ export interface ProcessStep {
   title: string;
   description: string;
   image: string;
+  caption?: string; // Optional caption shown under the step image
   figmaEmbedUrl?: string;
 }
 

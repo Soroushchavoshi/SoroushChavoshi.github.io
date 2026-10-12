@@ -47,7 +47,16 @@ export const PROJECTS: Project[] = [
       "/images/Torreh-orders-1.jpg",
       "/images/Torreh-orders-2.jpg"
     ],
-    challengeImagesCaption: "Alongside serving customers and packaging products, we had to use these sheets to identify which products each branch had ordered and in what quantities — a task that required considerable time and concentration during busy hours."
+    challengeImagesCaption: "Alongside serving customers and packaging products, we had to use these sheets to identify which products each branch had ordered and in what quantities — a task that required considerable time and concentration during busy hours.",
+
+    processSteps: [
+      {
+        title: "Was This Really a Problem?",
+        description: "Although my colleagues and I encountered difficulties when working with handwritten order sheets, I wanted to explore whether structuring the information more clearly could actually improve the process.\n\nTo test this idea, I created a simple table without changing the order-entry process itself. Orders were still recorded manually, and my goal was to see whether employees would prefer the new table to the previous method.",
+        image: "/images/Torreh-table.jpg",
+        caption: "Experimental Ordering Table: In this version, each row represented a product, while each of the three gray columns represented a branch."
+      }
+    ]
   },
   {
     id: 2,
