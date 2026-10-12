@@ -37,53 +37,17 @@ export const PROJECTS: Project[] = [
     description: "Designing an Ordering App for Torreh Bakery",
     
     // --- Detail Page Content ---
-    client: "Zeero, Mobility App",
+    client: "Torreh Bakery & Café",
     role: "Product Designer",
-    product: "Zeero, Mobility App",
+    product: "Torreh Bakery Ordering App",
     tools: ["Figma", "Figjam", "Pen & Paper"],
-    challenge: "I, along with my friend and colleague Kimia, as regular users of Zeero (an electric bike and motorcycle rental service), loved the idea but noticed several UX issues. We mapped the user journey to identify pain points and turned our assumptions into key questions.",
-    process: "We kicked off with a series of stakeholder workshops to align on the core KPIs. Following this, I led a card-sorting session with 15 active traders to understand their mental models regarding asset categorization.\n\nMoving from low-fidelity sketches on Figjam to high-fidelity prototypes in Figma, we iterated based on weekly feedback loops, focusing heavily on reducing the cognitive load for new users while retaining speed for power users.",
-    
-    // New Process Image (appears after process text)
-    processImage: "https://picsum.photos/id/3/1200/800",
-
-    // New 5 Steps
-    processSteps: [
-      {
-        title: "01. Discovery & Audit",
-        description: "We began by auditing the existing platform to identify friction points. Heatmaps revealed that 60% of clicks were concentrated on just 10% of the features, indicating a need to declutter.",
-        image: "https://picsum.photos/id/201/800/600"
-      },
-      {
-        title: "02. User Interviews",
-        description: "I conducted in-depth interviews with 10 power users and 5 novices. The key insight was that novices felt overwhelmed by data density, while power users wanted customization.",
-        image: "https://picsum.photos/id/445/800/600"
-      },
-      {
-        title: "03. Information Architecture",
-        description: "Using the card sorting results, we restructured the navigation tree. We moved from a deep hierarchy to a broader, shallower structure to reduce the number of clicks to key actions.",
-        image: "https://picsum.photos/id/6/800/600"
-      },
-      {
-        title: "04. Wireframing & Prototyping",
-        description: "Low-fidelity wireframes allowed us to test the new navigation flow without getting distracted by UI details. We validated the 'Quick Trade' feature placement early on.",
-        image: "https://picsum.photos/id/119/800/600"
-      },
-      {
-        title: "05. Validation & Handoff",
-        description: "Final usability testing showed a 40% reduction in time-to-task. The design system was updated, and assets were handed off to developers via Zeplin with detailed documentation.",
-        image: "https://picsum.photos/id/180/800/600"
-      }
+    challengeTitle: "The Problem",
+    challenge: "This project started with a real problem in my workplace.\n\nIn Khordad 1405 (June 2026), amid challenging conditions in the design job market, I started working as a sales associate at Torreh Bakery & Café.\n\nAt the central branch, my colleagues and I were responsible for preparing bread and pastry orders for the other branches.\n\nEvery morning, orders from the other branches were sent to us through messages and recorded on a handwritten sheet. The inconsistent handwriting and lack of structure made the orders difficult to read, especially during busy hours.\n\nAs someone directly involved in this process, I decided to find a way to make order management simpler and more structured.",
+    challengeImages: [
+      "/images/Torreh-orders-1.jpg",
+      "/images/Torreh-orders-2.jpg"
     ],
-
-    timeline: "1 Month and 2 Weeks",
-    
-    // Additional images for the case study grid
-    images: [
-      "https://picsum.photos/id/1/1200/900",   // Full width image
-      "https://picsum.photos/id/180/1200/800", // Grid image 1
-      "https://picsum.photos/id/20/1200/800"   // Grid image 2
-    ]
+    challengeImagesCaption: "Alongside serving customers and packaging products, we had to use these sheets to identify which products each branch had ordered and in what quantities — a task that required considerable time and concentration during busy hours."
   },
   {
     id: 2,

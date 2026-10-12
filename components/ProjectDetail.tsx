@@ -73,17 +73,9 @@ const ProjectDetail: React.FC<ProjectDetailProps> = ({ project, onBack, onNext }
                     {project.product && (
                         <div>
                             <h3 className="text-[10px] text-secondary uppercase tracking-widest mb-2 font-sans">Product</h3>
-                            {project.id === 1 ? (
-                              <p className="font-medium font-sans text-white text-lg">
-                                <span>
-                                  Zeero, Mobility App
-                                </span>
-                              </p>
-                            ) : (
-                              <p className="font-medium font-sans text-white text-lg">
+                            <p className="font-medium font-sans text-white text-lg">
                                 {project.product}
-                              </p>
-                            )}
+                            </p>
                         </div>
                     )}
                     
@@ -106,7 +98,7 @@ const ProjectDetail: React.FC<ProjectDetailProps> = ({ project, onBack, onNext }
             {/* Right Column: The Challenge */}
             <div className="md:col-span-8">
                 <section>
-                    <h2 className="text-4xl md:text-6xl font-sans font-light tracking-tight mb-8">The Challenge</h2>
+                    <h2 className="text-4xl md:text-6xl font-sans font-light tracking-tight mb-8">{project.challengeTitle || 'The Challenge'}</h2>
                     <div className="text-lg md:text-2xl leading-relaxed text-gray-400 font-light space-y-6 font-sans">
                         <p className="whitespace-pre-line">
                             {project.challenge || "Every project begins with a unique set of obstacles. For this client, the primary goal was to completely reimagine their digital presence to align with a new strategic direction."}
@@ -116,6 +108,28 @@ const ProjectDetail: React.FC<ProjectDetailProps> = ({ project, onBack, onNext }
             </div>
         </div>
       </div>
+
+      {/* BLOCK 1.5: Challenge Images (side by side) with caption */}
+      {project.challengeImages && project.challengeImages.length > 0 && (
+        <div className="container mx-auto px-6 mb-24 md:mb-40">
+            <div className="grid md:grid-cols-2 gap-6 md:gap-10">
+                {project.challengeImages.map((src, i) => (
+                    <div key={i} className="relative overflow-hidden group">
+                        <img
+                            src={src}
+                            className="w-full h-auto grayscale group-hover:grayscale-0 transition-all duration-[1.5s] ease-in-out"
+                            alt={`Context ${i + 1}`}
+                        />
+                    </div>
+                ))}
+            </div>
+            {project.challengeImagesCaption && (
+                <p className="mt-6 text-sm md:text-base leading-relaxed text-secondary font-light font-sans max-w-3xl">
+                    {project.challengeImagesCaption}
+                </p>
+            )}
+        </div>
+      )}
 
       {/* BLOCK 2: Full Width Image (Edge-to-Edge) */}
       {project.images && project.images[0] && (

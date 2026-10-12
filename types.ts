@@ -10,6 +10,9 @@ export interface Project {
   role?: string;
   product?: string;
   challenge?: string;
+  challengeTitle?: string; // Custom heading for the challenge section (defaults to "The Challenge")
+  challengeImages?: string[]; // Shown side by side under the challenge text
+  challengeImagesCaption?: string;
   process?: string; // New field for the "The Process" section
   solution?: string;
   images?: string[]; // For a gallery inside the detail page
