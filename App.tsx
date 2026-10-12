@@ -8,7 +8,6 @@ import AudioPlayer from './components/AudioPlayer';
 import { PROJECTS, SERVICES, SHOW_ABOUT } from './constants';
 import { Project } from './types';
 import { Award, Heart, ArrowRight } from 'lucide-react';
-import ResumeModal from './components/ResumeModal';
 
 const App: React.FC = () => {
   // State to track which project is currently being viewed.
@@ -20,7 +19,6 @@ const App: React.FC = () => {
 
   // State to control the slide-in/slide-out animation
   const [isProjectVisible, setIsProjectVisible] = useState(false);
-    const [isResumeOpen, setIsResumeOpen] = useState(false);
   
   // Ref for the project overlay container to handle scrolling
   const overlayRef = useRef<HTMLDivElement>(null);
@@ -70,18 +68,6 @@ const App: React.FC = () => {
     }, 700); // Matches the duration-700 in CSS
   };
 
-    const openResume = () => {
-        setIsResumeOpen(true);
-        // Prevent background scrolling while resume modal is open
-        try { document.body.style.overflow = 'hidden'; } catch (e) {}
-    };
-
-    const closeResume = () => {
-        setIsResumeOpen(false);
-        // Restore background scrolling
-        try { document.body.style.overflow = ''; } catch (e) {}
-    };
-
   // Scroll to top of overlay when activeProject changes
   useEffect(() => {
     if (activeProject && overlayRef.current) {
@@ -94,7 +80,7 @@ const App: React.FC = () => {
   return (
     <div className="bg-background text-primary min-h-screen selection:bg-accent selection:text-black font-sans">
       {/* Header is always visible and passes handleBackToHome to reset view/scroll */}
-    <Header onNavigate={handleBackToHome} onOpenResume={openResume} />
+    <Header onNavigate={handleBackToHome} />
       
       <main>
           {/* 
@@ -487,11 +473,8 @@ const App: React.FC = () => {
          </div>
       )}
 
-    {/* Resume Modal */}
-    <ResumeModal open={isResumeOpen} onClose={closeResume} />
-
-      {/* 
-         ACTIVE PROJECT OVERLAY 
+      {/*
+         ACTIVE PROJECT OVERLAY
          Slides up over the home page OR the ghost project.
       */}
       {activeProject && (

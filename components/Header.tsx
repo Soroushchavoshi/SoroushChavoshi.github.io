@@ -1,14 +1,13 @@
 
 import React, { useState } from 'react';
-import { Menu, X, Asterisk } from 'lucide-react';
-import { SHOW_ABOUT } from '../constants';
+import { Menu, X, Asterisk, Download } from 'lucide-react';
+import { SHOW_ABOUT, RESUME_URL } from '../constants';
 
 interface HeaderProps {
   onNavigate?: () => void;
-  onOpenResume?: () => void;
 }
 
-const Header: React.FC<HeaderProps> = ({ onNavigate, onOpenResume }) => {
+const Header: React.FC<HeaderProps> = ({ onNavigate }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const navLinks = [
@@ -27,10 +26,13 @@ const Header: React.FC<HeaderProps> = ({ onNavigate, onOpenResume }) => {
     }
 
     if (href === '#resume') {
-        // Instead of downloading directly, call the parent to open the resume modal
-        if (typeof onOpenResume === 'function') {
-          onOpenResume();
-        }
+        // Downloads the resume PDF directly – the only action of this link
+        const a = document.createElement('a');
+        a.href = RESUME_URL;
+        a.download = 'Soroush_Chavoshi_Resume.pdf';
+        document.body.appendChild(a);
+        a.click();
+        a.remove();
         return;
     }
 
@@ -84,9 +86,12 @@ const Header: React.FC<HeaderProps> = ({ onNavigate, onOpenResume }) => {
                   key={link.name} 
                   href={link.href} 
                   onClick={(e) => handleNavClick(e, link.href)}
-                  className="text-xs font-medium uppercase tracking-[0.2em] font-sans opacity-80 hover:opacity-100 transition-opacity"
+                  className="inline-flex items-center gap-1.5 text-xs font-medium uppercase tracking-[0.2em] font-sans opacity-80 hover:opacity-100 transition-opacity"
                 >
                   {link.name}
+                  {link.name === 'Resume' && (
+                    <Download className="w-[0.9em] h-[0.9em] text-accent opacity-60" />
+                  )}
                 </a>
               ))}
             </nav>
@@ -133,9 +138,12 @@ const Header: React.FC<HeaderProps> = ({ onNavigate, onOpenResume }) => {
               key={link.name} 
               href={link.href} 
               onClick={(e) => handleNavClick(e, link.href)}
-              className="text-6xl md:text-8xl font-sans font-light tracking-tighter text-white hover:text-accent transition-colors hover:translate-x-4 duration-300"
+              className="inline-flex items-center gap-4 text-6xl md:text-8xl font-sans font-light tracking-tighter text-white hover:text-accent transition-colors hover:translate-x-4 duration-300"
             >
               {link.name}
+              {link.name === 'Resume' && (
+                <Download className="w-[0.5em] h-[0.5em] text-accent opacity-60" />
+              )}
             </a>
           ))}
         </nav>

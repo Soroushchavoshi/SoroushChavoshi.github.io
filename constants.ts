@@ -5,6 +5,9 @@ import { Project, Service } from './types';
 // Set to true whenever you want the About section back.
 export const SHOW_ABOUT = false;
 
+// The header Resume link downloads this file directly.
+export const RESUME_URL = '/Soroush_Chavoshi_Resume.pdf';
+
 // ==========================================
 // PROJECT DATA (CASE STUDIES)
 // ==========================================
