@@ -32,7 +32,7 @@ export const PROJECTS: Project[] = [
   {
     id: 1,
     title: "From Scattered Orders to a Structured Ordering System",
-    tags: ["UX Case Study"],
+    tags: [],
     image: "/images/Zeero-Cover.jpg", // Main Cover Image
     description: "Designing an Ordering App for Torreh Bakery",
     
