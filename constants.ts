@@ -33,7 +33,7 @@ export const PROJECTS: Project[] = [
     id: 1,
     title: "Zeero:",
     tags: ["Redesign", "Mobility App"],
-    image: "/images/Project1-1.jpg", // Main Cover Image
+    image: "/images/Zeero-Cover.jpg", // Main Cover Image
     description: "Enhancing the City Ride with Better User Experience",
     
     // --- Detail Page Content ---
