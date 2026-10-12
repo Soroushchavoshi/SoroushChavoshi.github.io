@@ -84,7 +84,7 @@ const Header: React.FC<HeaderProps> = ({ onNavigate, onOpenResume }) => {
                   key={link.name} 
                   href={link.href} 
                   onClick={(e) => handleNavClick(e, link.href)}
-                  className={`text-xs font-medium uppercase tracking-[0.2em] font-sans opacity-80 hover:opacity-100 transition-opacity ${link.name === 'Resume' ? 'hidden lg:block' : ''}`}
+                  className="text-xs font-medium uppercase tracking-[0.2em] font-sans opacity-80 hover:opacity-100 transition-opacity"
                 >
                   {link.name}
                 </a>
