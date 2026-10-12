@@ -160,20 +160,18 @@ const ProjectDetail: React.FC<ProjectDetailProps> = ({ project, onBack, onNext }
                           />
                         </div>
                       ) : (
-                        <>
+                        <div className="container mx-auto px-6">
                           <img
                               src={step.image}
-                              className="w-full h-auto"
+                              className="w-full max-w-3xl h-auto"
                               alt={step.title}
                           />
                           {step.caption && (
-                            <div className="container mx-auto px-6">
-                                <p className={`mt-6 text-sm md:text-base leading-relaxed text-secondary font-light font-sans max-w-3xl ${isLastContent ? 'pb-16 md:pb-24' : 'mb-16 md:mb-24'}`}>
-                                    {step.caption}
-                                </p>
-                            </div>
+                            <p className={`mt-6 text-sm md:text-base leading-relaxed text-secondary font-light font-sans max-w-3xl ${isLastContent ? 'pb-16 md:pb-24' : 'mb-16 md:mb-24'}`}>
+                                {step.caption}
+                            </p>
                           )}
-                        </>
+                        </div>
                       )}
                   </div>
               </React.Fragment>
