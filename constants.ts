@@ -88,7 +88,7 @@ export const PROJECTS: Project[] = [
   {
     id: 2,
     title: "CardToCard:",
-    tags: ["MVP Design", "Solo Project", "1-Week Timeline"],
+    tags: [],
     image: "/images/Project2-1.jpg",
     description: "Designing a Persian-language card-to-card transfer MVP.",
     
