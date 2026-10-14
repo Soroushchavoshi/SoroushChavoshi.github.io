@@ -55,8 +55,57 @@ export const PROJECTS: Project[] = [
         description: "Although my colleagues and I encountered difficulties when working with handwritten order sheets, I wanted to explore whether structuring the information more clearly could actually improve the process.\n\nTo test this idea, I created a simple table without changing the order-entry process itself. Orders were still recorded manually, and my goal was to see whether employees would prefer the new table to the previous method.",
         image: "/images/Torreh-table.jpg",
         caption: "Experimental Ordering Table: In this version, each row represented a product, while each of the three gray columns represented a branch."
+      },
+      {
+        title: "From a Simple Table to a Systemized Process",
+        description: "The new table made orders easier to read, but recording the information was still a manual process that took employees time every morning and left room for errors.\n\nI wanted to go beyond improving the appearance of the order list and systemize the entire process, allowing branches to submit their orders directly and the central branch staff to receive the information in an organized, structured format.",
+        image: "/images/Torreh-app-first-version.png",
+        wide: true,
+        caption: "I built the initial version of the app with the help of AI tools and made it available to the employees."
+      },
+      {
+        title: "Observe, Iterate, Improve",
+        description: "After building the initial version, I observed my colleagues as they used the app and gathered feedback about their experience.\n\nBased on these observations, I made small changes and shared updated versions with them.\n\nI worked through this process with two colleagues, gradually improving the user interface and adding new features along the way.",
+        image: "/images/Torreh-app-iterations.png",
+        wide: true,
+        caption: "AI tools helped me quickly address the small issues I observed and see how those changes affected my colleagues’ behavior as they used the app."
+      },
+      {
+        title: "The Final Solution",
+        description: "After several rounds of iteration, we arrived at a more mature version of the ordering app.\n\nInstead of sending messages and having the central branch manually record orders, other branches could now submit orders directly through the app.\n\nAt the central branch, the person who previously had to collect messages and manually record every order each morning could now view orders from all branches in a structured table, review them, and print them with a single click.\n\nMy colleagues then received the printed sheet and used it to pick the items for each order.",
+        image: "/images/Torreh-app-final-solution.png",
+        wide: true,
+        caption: "Each branch submitted its orders through its own interface, while the central branch could view all orders in one place and print them with a single click."
+      },
+      {
+        title: "Key Learnings",
+        description: "",
+        image: "",
+        subsections: [
+          {
+            title: "Iterative Improvements Over Major Redesigns",
+            description: "Small, rapid iterations helped me identify problems during actual use and gradually improve the product experience without needing major redesigns."
+          },
+          {
+            title: "Designing in the Real World, with Real Constraints",
+            description: "This project taught me that getting started doesn’t always require ideal research processes or extensive resources. Even carefully observing a few users in their actual work environment can provide valuable insights, as long as the limitations of those observations are also acknowledged."
+          }
+        ]
+      },
+      {
+        title: "Project Outcome",
+        description: "",
+        image: "",
+        images: [
+          "/images/Torreh-printed-orders.jpg",
+          "/images/Torreh-handwritten-orders.jpg"
+        ],
+        caption: "The ordering process shifted from collecting messages and recording orders manually to digital order submission and printing a structured table."
       }
-    ]
+    ],
+    closingImage: "/images/Torreh-bakery-animation.gif",
+    articleUrl: "https://virgool.io/@Soroushchavoshi/%D8%A7%D8%B2-%D8%B3%D9%81%D8%A7%D8%B1%D8%B4-%D9%87%D8%A7%DB%8C-%D9%BE%D8%B1%D8%A7%DA%A9%D9%86%D8%AF%D9%87-%D8%AA%D8%A7-%D8%B3%D9%81%D8%A7%D8%B1%D8%B4-%DA%AF%DB%8C%D8%B1%DB%8C-%D8%B3%D8%A7%D8%AE%D8%AA%D8%A7%D8%B1%DB%8C%D8%A7%D9%81%D8%AA%D9%87-%D8%A8%DB%8C%D9%86-%D8%B4%D8%B9%D8%A8-%D8%B7%D8%B1%D8%A7%D8%AD%DB%8C-%D8%A7%D9%BE%D9%84%DB%8C%DA%A9%DB%8C%D8%B4%D9%86-%D8%B3%D9%81%D8%A7%D8%B1%D8%B4-%DA%AF%DB%8C%D8%B1%DB%8C-%D8%B4%D8%B9%D8%A8-%D9%86%D8%A7%D9%86%D9%88%D8%A7%DB%8C%DB%8C-%D9%88-%D9%82%D9%86%D8%A7%D8%AF%DB%8C-%D8%B7%D8%B1%D9%87-cmxvt1r1cxuw",
+    articleLabel: "خواندن به فارسی در ویرگول"
   },
   {
     id: 2,

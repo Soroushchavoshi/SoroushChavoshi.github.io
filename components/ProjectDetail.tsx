@@ -133,7 +133,7 @@ const ProjectDetail: React.FC<ProjectDetailProps> = ({ project, onBack, onNext }
       {project.processSteps && project.processSteps.map((step, idx) => {
           // Check if this is the last step AND there is no subsequent "Solution" text.
           // If so, we remove the bottom margin so the image sticks to the footer.
-          const isLastContent = idx === (project.processSteps?.length || 0) - 1 && !project.solution;
+          const isLastContent = idx === (project.processSteps?.length || 0) - 1 && !project.solution && !project.closingImage;
           const hasFigmaEmbed = !!step.figmaEmbedUrl;
           
           return (
@@ -145,6 +145,18 @@ const ProjectDetail: React.FC<ProjectDetailProps> = ({ project, onBack, onNext }
                           <div className="text-lg md:text-2xl leading-relaxed text-gray-400 font-light font-sans">
                               <p className="whitespace-pre-line">{step.description}</p>
                           </div>
+                          {step.subsections && step.subsections.length > 0 && (
+                              <div className="mt-12 md:mt-16 space-y-12 md:space-y-16">
+                                  {step.subsections.map((sub, i) => (
+                                      <div key={i}>
+                                          <h3 className="text-2xl md:text-4xl font-sans font-light tracking-tight mb-6 text-primary">{sub.title}</h3>
+                                          <div className="text-lg md:text-2xl leading-relaxed text-gray-400 font-light font-sans">
+                                              <p className="whitespace-pre-line">{sub.description}</p>
+                                          </div>
+                                      </div>
+                                  ))}
+                              </div>
+                          )}
                       </div>
                   </div>
                   
@@ -159,7 +171,37 @@ const ProjectDetail: React.FC<ProjectDetailProps> = ({ project, onBack, onNext }
                             title={`Figma Prototype - ${step.title}`}
                           />
                         </div>
-                      ) : (
+                      ) : step.images && step.images.length > 0 ? (
+                        <div className="container mx-auto px-6">
+                          <div className="grid md:grid-cols-2 gap-6 md:gap-10">
+                              {step.images.map((src, i) => (
+                                  <div key={i} className="relative overflow-hidden">
+                                      <img src={src} className="w-full h-auto" alt={`${step.title} ${i + 1}`} />
+                                  </div>
+                              ))}
+                          </div>
+                          {step.caption && (
+                            <p className={`mt-6 text-sm md:text-base leading-relaxed text-secondary font-light font-sans max-w-3xl ${isLastContent ? 'pb-16 md:pb-24' : 'mb-16 md:mb-24'}`}>
+                                {step.caption}
+                            </p>
+                          )}
+                        </div>
+                      ) : step.image && step.wide ? (
+                        <>
+                          <img
+                              src={step.image}
+                              className="w-full h-auto"
+                              alt={step.title}
+                          />
+                          {step.caption && (
+                            <div className="container mx-auto px-6">
+                              <p className={`mt-6 text-sm md:text-base leading-relaxed text-secondary font-light font-sans max-w-3xl ${isLastContent ? 'pb-16 md:pb-24' : 'mb-16 md:mb-24'}`}>
+                                  {step.caption}
+                              </p>
+                            </div>
+                          )}
+                        </>
+                      ) : step.image ? (
                         <div className="container mx-auto px-6">
                           <img
                               src={step.image}
@@ -172,11 +214,22 @@ const ProjectDetail: React.FC<ProjectDetailProps> = ({ project, onBack, onNext }
                             </p>
                           )}
                         </div>
-                      )}
+                      ) : null}
                   </div>
               </React.Fragment>
           );
       })}
+
+      {/* Closing Image (e.g., animated gif) */}
+      {project.closingImage && (
+        <div className="container mx-auto px-6 pb-16 md:pb-24 flex justify-center -mt-10 md:-mt-24">
+          <img
+              src={project.closingImage}
+              className="w-full max-w-md h-auto"
+              alt="Closing"
+          />
+        </div>
+      )}
 
       {/* BLOCK 5: The Approach / Solution */}
       {project.solution && (

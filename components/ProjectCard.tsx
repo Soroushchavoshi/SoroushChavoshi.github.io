@@ -52,6 +52,19 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project, index, onClick, id, 
               </div>
             </div>
 
+            {/* External Article Link (e.g., Persian version on Virgool) */}
+            {project.articleUrl && (
+              <a
+                href={project.articleUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                onClick={(e) => e.stopPropagation()}
+                className="self-start mt-2 px-4 py-2 rounded-full border border-white/10 bg-white/5 text-sm text-primary hover:border-accent hover:text-accent transition-colors duration-300 font-sans"
+              >
+                {project.articleLabel || 'Read in Persian'}
+              </a>
+            )}
+
          </div>
       </div>
 

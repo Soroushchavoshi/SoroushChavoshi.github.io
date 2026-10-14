@@ -22,6 +22,11 @@ export interface Project {
   // New fields for detailed process breakdown
   processImage?: string;
   processSteps?: ProcessStep[];
+  // Closing media shown after the last process step, before the footer
+  closingImage?: string;
+  // Optional external article link (e.g., Virgool) shown on the Work card
+  articleUrl?: string;
+  articleLabel?: string;
 }
 
 export interface ProcessStep {
@@ -29,7 +34,12 @@ export interface ProcessStep {
   description: string;
   image: string;
   caption?: string; // Optional caption shown under the step image
+  wide?: boolean; // Render the image edge-to-edge (no container constraint)
   figmaEmbedUrl?: string;
+  // Sub-headings rendered under the description (e.g., "Key Learnings" items)
+  subsections?: { title: string; description: string }[];
+  // Extra images rendered side by side instead of a single image (e.g., "Project Outcome")
+  images?: string[];
 }
 
 export interface Service {
